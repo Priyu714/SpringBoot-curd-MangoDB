@@ -22,7 +22,7 @@ public class ShopController {
     }
 
     //localhost:9090/shop/shopbyid/12
-    @GetMapping("shopbyid/id")
+    @GetMapping("shopbyid/{id}")
     public Shop getAllShopById(@PathVariable String id)
     {
         return shopRepository.findById(id).get();
